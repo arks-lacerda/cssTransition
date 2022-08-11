@@ -1,0 +1,127 @@
+/*body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+.box-red {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+
+.box-red {
+  background-color: #f00;
+  transition-property: all;
+  transition-duration: 5s;
+}
+
+
+.box-red:hover {
+  background-color: #ff0;
+  transition-property: background-color, width, height;
+  transition-duration: 5s;
+  width: 200px;
+  height: 200px;
+}
+
+.line {
+  width: 100%;
+  background-color: #01f;
+  height: 25px;
+  margin-bottom: 10px;
+
+  transition-property: width;
+  transition-duration: 1s;
+}
+
+body:hover .line {
+  width: 20px;
+  background-color: rgb(255, 0, 234);
+}
+
+.ease {
+  transition-timing-function: ease;
+}
+
+.linear {
+  transition-timing-function: linear;
+}
+
+.ease-in {
+  transition-timing-function: ease-in;
+}
+.ease-out {
+  transition-timing-function: ease-out;
+}
+.ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+
+.cube {
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+*/
+
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+.box-red,
+.box-green,
+.box-blue,
+.box-yellow {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+
+.box-red {
+  background-color: #f00;
+  transition: background-color 2s ease 4s;
+}
+
+.box-red:hover {
+  background-color: #ff0;
+  transition-property: background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+  transition-delay: 4s;
+}
+
+.box-green {
+  background-color: #093;
+  transition: all 1s linear 2s;
+}
+
+.box-green:hover {
+  transition: all 1s cubic-bezier(.29, 1.01, 1, -0.68);
+  background-color: rgb(255, 0, 208);
+  width: 300px;
+  height: 300px;
+  border-radius: 8px;
+}
+
+.box-blue {
+  background-color: #01F;
+  transition: width 1s linear 1s;
+}
+
+.box-blue:hover {
+  transition: width 2s ease-in 0s;
+  width: 200px;
+}
+
+.box-yellow {
+  background-color: #ff0;
+  transition: opacity 2s linear 1s;
+}
+
+.box-yellow:hover {
+  opacity: 0;
+  transition: opacity 1s linear 0s;
+}
